@@ -1,0 +1,23 @@
+need 'madBasic'
+need 'madDisAsm'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madRemote\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madRemote\Delphi 7;'
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\madRemote.dcu', 421E, 1C98D262740AE16
+'Delphi 4\madRemote_.bpl', 4C00, 1C98D262764715C
+'Delphi 4\madRemote_.dcp', 3F35, 1C98D2627431070
+'Delphi 7\madRemote.dcu', 4234, 1C98D2641EA9A9C
+'Delphi 7\madRemote_.bpl', 4400, 1C98D2641FDAD6C
+'Delphi 7\madRemote_.dcp', 3FA7, 1C98D2641ECFCF6
+'Demos\mad.res', 1B98, 1C271231F235B00
+'Demos\RemoteCmdLine.bdsproj', 203E, 1C4A936C6B07E00
+'Demos\RemoteCmdLine.cpp', BAC, 1C50B825A62B700
+'Demos\RemoteCmdLine.dpr', 84D, 1C337FEFBAAC700
+'Demos\RemoteCmdLine.dsp', A39, 1C42564320EBB00
+'Demos\RemoteCmdLine.vcproj', AAC, 1C4256428855300
+'Help\Content.htm', 6CF, 1C4C4E8D8AEAF00
+'Help\madRemote.htm', 6D3, 1C4C4E91F040E00
+'www.madshi.net.url', 59, 1BFE9B9B71CC200

@@ -1,0 +1,27 @@
+need 'madBasic'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madShell\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madShell\Delphi 7;'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Browsing Path' -= 'D:\b\madCollection\madShell\Sources;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Browsing Path' -= 'D:\b\madCollection\madShell\Sources;'
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Sources', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\madShell.dcu', 17169, 1C98D262900E82E
+'Delphi 4\madShell_.bpl', 11C00, 1C98D26296E945A
+'Delphi 4\madShell_.dcp', 104E9, 1C98D2629034A88
+'Delphi 7\madShell.dcu', 17667, 1C98D264A6DBFF0
+'Delphi 7\madShell_.bpl', 11E00, 1C98D264ABECFE4
+'Delphi 7\madShell_.dcp', 10AA3, 1C98D264A70224A
+'Demos\DesktopPos.dfm', 250, 1C29C5EF4570E00
+'Demos\DesktopPos.pas', A06, 1C29C5ECD004100
+'Demos\DesktopPosSaver.bdsproj', 2040, 1C4A936C0BA9D00
+'Demos\DesktopPosSaver.dpr', E7, 1C2E714FECCEC00
+'Demos\MAD.RES', 1B98, 1C271231F235B00
+'Help\Content.htm', 6CF, 1C4C4E8D187A100
+'Help\madShell.htm', 6D1, 1C4C4E8FC71F500
+'Sources\mad.inc', 1C1, 1C7D2C7F10D1FC4
+'Sources\madShell.pas', 1F56F, 1C98AE627B1C926
+'Sources\madShell_.dpk', 248, 1C98AE839A77E76
+'www.madshi.net.url', 59, 1BFE9B9B71CC200

@@ -1,0 +1,201 @@
+<html>
+
+  <head>
+    <title>mad* Help...</title>
+    <meta name="description" content="mad* Help...">
+    <meta name="keywords" content="madshi, components, delphi">
+    <meta http-equiv="expires" content="900">
+    <link rel=stylesheet type="text/css" href="style.css">
+  </head>
+
+  <body background="bcklight.gif" bgcolor=#F8F8F8>
+    <table border=0 cellpadding=0 callspacing=0><tr>
+      <td valign=bottom>
+        <table border=0 cellpadding=0 cellspacing=0><tr><td bgcolor=#D8D8D8>
+          <table cellpadding=3 border=0>
+            <tr><td bgcolor=#FFFFF0>
+              <div id="verySmall"><br></div>
+              <div id="bigTitle">&nbsp;Dll Injecting&nbsp;</div>
+              <div id="verySmall"><br></div>
+              <div id="small">
+                <a class="small" href="Content.htm">Content</a> /
+                <a class="small" href="madCodeHook.htm">madCodeHook</a> /...
+              </div>
+            </td></tr>
+          </table>
+        </td></tr></table>
+      </td>
+      <td valign=bottom>
+        <table border=0 cellpadding=0 cellspacing=0><tr><td bgcolor=#D8D8D8>
+          <table cellpadding=7 border=0>
+            <tr><td bgcolor=#F4F4F8><a href="http://www.madshi.net">www.madshi.net</a></td></tr>
+          </table>
+        </td></tr></table>
+      </td>
+    </tr></table>
+    <p>If you want to hook an API in another process (e.g. Notepad) or if you want
+       to do system wide API hooking in both OS families (9x/NT), you have to write
+       a little DLL which does all the hooking work. This DLL then needs to be
+       loaded into the target process(es) to do there whatever you want it to do.
+       There's no documented possibility to inject a DLL into another process.
+       Often "SetWindowsHookEx" is misused for this purpose, but doing so has
+       several disadvantages: (1) It effects performance, because you have to set
+       up a real message hook, which then gets called all the time, although you
+       are not interested in the results at all. (2) It works only for processes
+       which handle messages, not all processes do so. For example most console
+       applications don't. (3) It works only if the target process is not blocked,
+       frozen or crashed. (4) The DLL might be loaded into the target process later
+       than expected. As a result you might miss some important API calls.</p>
+    <a name="InjectLibrary"></a>
+    <a name="InjectLibraryA"></a>
+    <a name="InjectLibraryW"></a>
+    <a name="InjectLibrarySession"></a>
+    <a name="InjectLibrarySessionA"></a>
+    <a name="InjectLibrarySessionW"></a>
+    <a name="CURRENT_USER"></a>
+    <a name="CURRENT_SESSION"></a>
+    <a name="ALL_SESSIONS"></a>
+    <a name="SYSTEM_PROCESSES"></a>
+    <a name="CURRENT_PROCESS"></a>
+    <p>The package madCodeHook offers various injection related functions, which
+       work without any of the mentioned disadvantages. The function "InjectLibrary"
+       is able to inject your DLL into any already running 32bit process. You can
+       specify one specific target process or any of the special flags. Those
+       special flags work only if you have administrator rights, otherwise
+       "InjectLibrary" will fail and GetLastError will report ERROR_ACCESS_DENIED.
+       All special flags result in your DLL being injected into some (or all)
+       currently running and in the future created processes. This injection system
+       stays alive until the next reboot (or until you call <a href="#UninjectLibrary">UninjectLibrary</a>),
+       regardless of whether your application continues to run or not. Besides: As
+       long as your DLL is actively injected, is can't be unloaded. FreeLibrary
+       will return "false" and ERROR_ACCESS_DENIED.</p>
+    <p>For C++ programmers: If you're using the dynamic lib, the target process(es)
+       must not only be able to locate your hook DLL, but it/they must also be able
+       to locate "madCHook.dll". In order to solve that you can either put
+       "madCHook.dll" into the system directory or you can use the static lib or
+       you can first call "InjectLibrary(whatever, "madCHook.dll")" before
+       injecting your own dll. The static lib comes only with the commercial
+       version of madCodeHook.</p>
+    <table width=100% cellpadding=0 border=0>
+      <tr>
+        <td bgcolor=#D8D8D8>
+          <table width=100% cellpadding=10 border=0>
+            <tr>
+              <td bgcolor=#F8F0F0><img src='px.gif'></td>
+              <td width=100% bgcolor=#F4F4F8>
+                <span id='mono'>
+                  <span id='bold'>const</span><br>
+                  &nbsp;&nbsp;<span id='comment'>// special flags</span><br>
+                  &nbsp;&nbsp;<span id='identifier'>ALL_SESSIONS</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <span id='number'>$FFFFFFED</span>; &nbsp;<span id='comment'>// apps of all sessions</span><br>
+                  &nbsp;&nbsp;<span id='identifier'>CURRENT_SESSION</span>&nbsp;&nbsp;= <span id='number'>$FFFFFFEC</span>; &nbsp;<span id='comment'>// apps of current session</span><br>
+                  &nbsp;&nbsp;<span id='identifier'>CURRENT_USER</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <span id='number'>$FFFFFFEB</span>; &nbsp;<span id='comment'>// apps of current user</span><br>
+                  <br>
+                  &nbsp;&nbsp;<span id='comment'>// the following flags may only be used in combination with the first 3 flags</span><br>
+                  &nbsp;&nbsp;<span id='identifier'>SYSTEM_PROCESSES</span>&nbsp;= <span id='number'>$10</span>; &nbsp;<span id='comment'>// include this flag to include system processes + services</span><br>
+                  &nbsp;&nbsp;<span id='identifier'>CURRENT_PROCESS</span>&nbsp;&nbsp;= <span id='number'>$8</span>; &nbsp;&nbsp;<span id='comment'>// exclude this flag to exclude injection into yourself</span><br>
+                  <br>
+                  <span id='comment'>// inject a DLL into a specific process or user/session/system wide</span><br>
+                  <span id='bold'>function</span>&nbsp;<span id='identifier'>InjectLibrary</span>&nbsp;(<span id='identifier'>processHandle</span>&nbsp;: <span id='identifier'>dword</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>libFileName</span>&nbsp;&nbsp;&nbsp;: <span id='bold'>string</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>timeOut</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>&nbsp;= <span id='number'>7000</span>) : <span id='identifier'>boolean</span>;<br>
+                  <br>
+                  <span id='comment'>// same as InjectLibrary(CURRENT_SESSION), but you can specify the target session</span><br>
+                  <span id='bold'>function</span>&nbsp;<span id='identifier'>InjectLibrarySession</span>&nbsp;(<span id='identifier'>session</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>systemProcesses</span>&nbsp;: <span id='identifier'>bool</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>libFileName</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='bold'>string</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>timeOut</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>&nbsp;= <span id='number'>7000</span>) : <span id='identifier'>boolean</span>;<br>
+                  <br>
+                  <span id='comment'>// Example:</span><br>
+                  <span id='identifier'>InjectLibrary</span>((<span id='identifier'>ALL_SESSIONS</span>&nbsp;<span id='bold'>or</span>&nbsp;<span id='identifier'>SYSTEM_PROCESSES</span>) <span id='bold'>and</span>&nbsp;(<span id='bold'>not</span>&nbsp;<span id='identifier'>CURRENT_PROCESS</span>), <span id='string'>'your.dll'</span>);
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <a name="UninjectLibrary"></a>
+    <a name="UninjectLibraryA"></a>
+    <a name="UninjectLibraryW"></a>
+    <a name="UninjectLibrarySession"></a>
+    <a name="UninjectLibrarySessionA"></a>
+    <a name="UninjectLibrarySessionW"></a>
+    <a name="STOP_VIRUS"></a>
+    <p>You can undo the DLL injection by calling "UninjectLibrary". It works
+       similar to "InjectLibrary", except that it removes your DLL from the
+       specified process(es). There's one additional flag which you can use, namely
+       "STOP_VIRUS". If you specify this flag, the injection into newly created
+       processes is stopped, but your DLL is not unloaded from the running
+       processes. Please note that for security reasons only the very same module
+       (exe/dll) which injected a specific DLL can later uninject it again.</p>
+    <p>For C++ programmers there's one potential problem when calling
+       UninjectLibrary(SomeSpecialFlag, "madCHook.dll") in win9x. Uninjecting a DLL
+       system wide will in win9x really result in the DLL being removed from each
+       and every process - regardless of whether the DLL was statically or
+       dynamically linked! So if your application builds on and needs
+       "madCHook.dll" to run you must not uninject it at all in win9x. You can
+       solve this problem by either using the static lib, or by putting
+       "madCHook.dll" into the system directory. In that case you neither need to
+       inject nor to uninject it.</p>
+    <table width=100% cellpadding=0 border=0>
+      <tr>
+        <td bgcolor=#D8D8D8>
+          <table width=100% cellpadding=10 border=0>
+            <tr>
+              <td bgcolor=#F8F0F0><img src='px.gif'></td>
+              <td width=100% bgcolor=#F4F4F8>
+                <span id='mono'>
+                  <span id='comment'>// Uninject a DLL from a specific process or user/session/system wide</span><br>
+                  <span id='bold'>function</span>&nbsp;<span id='identifier'>UninjectLibrary</span>&nbsp;(<span id='identifier'>processHandle</span>&nbsp;: <span id='identifier'>dword</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>libFileName</span>&nbsp;&nbsp;&nbsp;: <span id='bold'>string</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>timeOut</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>&nbsp;= <span id='number'>7000</span>) : <span id='identifier'>boolean</span>;<br>
+                  <br>
+                  <span id='comment'>// same as UninjectLibrary(CURRENT_SESSION), but you can specify the target session</span><br>
+                  <span id='bold'>function</span>&nbsp;<span id='identifier'>UninjectLibrarySession</span>&nbsp;(<span id='identifier'>session</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>systemProcesses</span>&nbsp;: <span id='identifier'>bool</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>libFileName</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='bold'>string</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>timeOut</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>&nbsp;= <span id='number'>7000</span>) : <span id='identifier'>boolean</span>;
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <a name="CreateProcessEx"></a>
+    <a name="CreateProcessExA"></a>
+    <a name="CreateProcessExW"></a>
+    <p>The "CreateProcessEx" function basically works exactly like the well known
+       Windows API "CreateProcess". But it has one additional parameter that lets
+       you define a DLL which you want to have injected into the to-be-started
+       process. When called, "CreateProcessEx" starts the specified process, but
+       patches it in a way, that it behaves as if it would have a "LoadLibrary"
+       call right in the first line of it's source code.</p>
+    <table width=100% cellpadding=0 border=0>
+      <tr>
+        <td bgcolor=#D8D8D8>
+          <table width=100% cellpadding=10 border=0>
+            <tr>
+              <td bgcolor=#F8F0F0><img src='px.gif'></td>
+              <td width=100% bgcolor=#F4F4F8>
+                <span id='mono'>
+                  <span id='bold'>function</span>&nbsp;<span id='identifier'>CreateProcessEx</span>&nbsp;(<span id='identifier'>applicationName</span>, <span id='identifier'>commandLine</span>&nbsp;: <span id='identifier'>pchar</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>processAttr</span>, <span id='identifier'>threadAttr</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>PSecurityAttributes</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>inheritHandles</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>bool</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>creationFlags</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>dword</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>environment</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>pointer</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>currentDirectory</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>pchar</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='bold'>const</span>&nbsp;<span id='identifier'>startupInfo</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>TStartupInfo</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='bold'>var</span>&nbsp;<span id='identifier'>processInfo</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='identifier'>TProcessInformation</span>;<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='identifier'>loadLibrary</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span id='bold'>string</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;) : <span id='identifier'>boolean</span>;
+                </span>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    
+  </body>
+
+</html>

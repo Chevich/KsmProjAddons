@@ -1,0 +1,62 @@
+package RtlEtv4;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'EtvLibrary'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  VCLDB40,
+  VCLMID40,
+  VCLSMP40;
+
+contains
+  Etvbor in 'Etvbor.pas',
+  DiDual in 'DiDual.pas',
+  Etvcontr in 'Etvcontr.pas',
+  EtvDB in 'EtvDB.pas',
+  EtvFilt in 'EtvFilt.pas',
+  Etvforms in 'Etvforms.pas',
+  EtvGrid in 'EtvGrid.pas',
+  EtvLook in 'EtvLook.pas',
+  EtvMem in 'EtvMem.pas',
+  Etvpas in 'Etvpas.pas',
+  Etvprint in 'Etvprint.pas',
+  EtvTable in 'EtvTable.pas',
+  fBase in 'fBase.pas',
+  Filter in 'Filter.pas',
+  EtvFind in 'EtvFind.pas',
+  EtvConst in 'EtvConst.pas',
+  EtvDBFun in 'EtvDBFun.pas',
+  EtvPopup in 'EtvPopup.pas',
+  EtvOther in 'EtvOther.pas',
+  EtvMisc in 'EtvMisc.pas',
+  DiPara in 'DiPara.pas' {DialParagraph},
+  DiPrint in 'DiPrint.pas' {DialPrint},
+  EtvRich in 'EtvRich.pas' {RichEditSearch},
+  DiReplace in 'DiReplace.pas' {DialReplace},
+  DiFind in 'DiFind.pas' {DialFind},
+  EtvTemp in 'EtvTemp.pas';
+
+end.

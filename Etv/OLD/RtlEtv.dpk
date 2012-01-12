@@ -1,0 +1,58 @@
+package RtlEtv;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'EtvLibrary'}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  VCLDB30,
+  VCLSMP30;
+
+contains
+  Etvbor,
+  DiDual,
+  Etvcontr,
+  EtvDB,
+  EtvFilt,
+  Etvforms,
+  EtvGrid,
+  EtvLook,
+  EtvMem,
+  Etvpas,
+  Etvprint,
+  EtvTable,
+  fBase,
+  Filter,
+  DiFind,
+  EtvFind,
+  EtvConst,
+  EtvDBFun,
+  EtvPopup,
+  EtvOther,
+  EtvMisc,
+  DiPara,
+  DiReplace;
+
+end.

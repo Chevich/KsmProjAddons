@@ -1,0 +1,95 @@
+need 'madBasic'
+need 'madDisAsm'
+'HKCU\Software\Borland\Delphi\4.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 4\madExceptIde_.bpl' = -
+'HKCU\Software\Borland\Delphi\7.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 7\madExceptIde_.bpl' = -
+'HKCU\Software\Borland\Delphi\4.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 4\madExcept_.bpl' = -
+'HKCU\Software\Borland\Delphi\7.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 7\madExcept_.bpl' = -
+'HKCU\Software\Borland\Delphi\4.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 4\madExceptVcl_.bpl' = -
+'HKCU\Software\Borland\Delphi\7.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 7\madExceptVcl_.bpl' = -
+'HKCU\Software\Borland\Delphi\4.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 4\madExceptWizard_.bpl' = -
+'HKCU\Software\Borland\Delphi\7.0\Known Packages'\'D:\b\madCollection\madExcept\Delphi 7\madExceptWizard_.bpl' = -
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madExcept\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madExcept\Delphi 7;'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madExcept\..\Plugins;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madExcept\..\Plugins;'
+'HKCU\Software\madshi\madExcept'\'plugin root' = -
+'HKCR\.mep'\'' = -
+'HKCR\madExceptPlugin\shell\open\command'\'' = -
+'HKCR\madExceptPlugin\DefaultIcon'\'' = -
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Tools', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\mad.inc', 1C1, 1C7D2C7F10D1FC4
+'Delphi 4\madDumpObj.dcu', 1424, 1C98D2620042AEC
+'Delphi 4\madExcept.dcu', 56AD0, 1C98D261FDBA2F2
+'Delphi 4\madExceptIde_.bpl', 7800, 1C98D2620CC7074
+'Delphi 4\madExceptVcl.dcu', D0D, 1C98D26200DB454
+'Delphi 4\madExceptVcl_.bpl', 3A00, 1C98D2620BE2258
+'Delphi 4\madExceptVcl_.dcp', 15F7, 1C98D26201016AE
+'Delphi 4\madExceptWizard_.bpl', 75400, 1C98D2620D5F9DC
+'Delphi 4\madExcept_.bpl', 54A00, 1C98D261FEEB5C2
+'Delphi 4\madExcept_.dcp', 56E8A, 1C98D261FE067A6
+'Delphi 4\madIWSupport.dfm', 1C4, 1C402F9428F0D00
+'Delphi 4\madIWSupport.pas', 1614, 1C6D661E479D800
+'Delphi 4\madLinkDisAsm.dcu', 188, 1C98D26209F23C6
+'Delphi 4\madListHardware.dcu', 1829, 1C98D262071D718
+'Delphi 4\madListModules.dcu', ACD, 1C98D262071D718
+'Delphi 4\madListProcesses.dcu', 1724, 1C98D262071D718
+'Delphi 4\madMapFile.dcu', 89E8, 1C98D2620959A5E
+'Delphi 4\madNVAssistant.dcu', DAC0, 1C98D262097FCB8
+'Delphi 4\madNVBitmap.dcu', 5276, 1C98D262097FCB8
+'Delphi 4\madNVPrgrAlert.dcu', 2A97, 1C98D262090D5AA
+'Delphi 4\madStackTrace.dcu', 70ED, 1C98D2620959A5E
+'Delphi 7\mad.inc', 1C1, 1C7D2C7F10D1FC4
+'Delphi 7\madDumpObj.dcu', 169A, 1C98D26497106AC
+'Delphi 7\madExcept.dcu', 57169, 1C98D26494D4366
+'Delphi 7\madExceptIde_.bpl', 7800, 1C98D2649FDB16A
+'Delphi 7\madExceptVcl.dcu', D97, 1C98D2649C216A0
+'Delphi 7\madExceptVcl_.bpl', 3C00, 1C98D2649F42802
+'Delphi 7\madExceptVcl_.dcp', 182D, 1C98D2649C478FA
+'Delphi 7\madExceptWizard_.bpl', 69E00, 1C98D264A073AD2
+'Delphi 7\madExcept_.bpl', 4F200, 1C98D26495DF3DC
+'Delphi 7\madExcept_.dcp', 575D6, 1C98D264952081A
+'Delphi 7\madIWSupport.dfm', 1C4, 1C402F9428F0D00
+'Delphi 7\madIWSupport.pas', 1614, 1C6D661E479D800
+'Delphi 7\madLinkDisAsm.dcu', 1C7, 1C98D26497106AC
+'Delphi 7\madListHardware.dcu', 1A4C, 1C98D26497106AC
+'Delphi 7\madListModules.dcu', C3D, 1C98D26497106AC
+'Delphi 7\madListProcesses.dcu', 1913, 1C98D26497106AC
+'Delphi 7\madMapFile.dcu', 8A83, 1C98D2649AF03D0
+'Delphi 7\madNVAssistant.dcu', DFB5, 1C98D2649B1662A
+'Delphi 7\madNVBitmap.dcu', 520D, 1C98D2649B1662A
+'Delphi 7\madNVPrgrAlert.dcu', 2AEF, 1C98D2649AA3F1C
+'Delphi 7\madStackTrace.dcu', 71CA, 1C98D2649B1662A
+'Demos\ConfForm.dfm', 2E1, 1C28F1EC06DB000
+'Demos\ConfForm.pas', B0F, 1C323060197B000
+'Demos\EC.bdsproj', 2033, 1C54CE56ECBD100
+'Demos\EC.DPR', 1D9, 1C5ACE93F57C000
+'Demos\EC.MES', 1A9B, 1C5ACE93F57C000
+'Demos\ecCrashParam.pas', 7E0, 1C8F62F985A2700
+'Demos\ecDll.pas', 1E2, 1C31D4D98380000
+'Demos\ecMain.dfm', 1A41, 1C298A41B4EC200
+'Demos\ecMain.pas', 2B99, 1C8F62C0E5C8F00
+'Demos\ecMini.pas', 3CA, 1C29887352DDC00
+'Demos\ecStrings.pas', 550D, 1C981F8E1FB8700
+'Demos\ExcCatch.bdsproj', 2039, 1C4A934C616E800
+'Demos\ExcCatch.dpr', 373, 1C5ACE95AC2CB00
+'Demos\ExcCatch.mes', 1A9A, 1C5ACE95AC2CB00
+'Demos\madExcept.res', 4C4, 1C321F0B5A71700
+'Demos\TraceConf.bdsproj', 203A, 1C4A93564A34900
+'Demos\TraceConf.dpr', 151, 1C5ACE96DD59B00
+'Demos\TraceConf.htm', 775, 1C28F1F64EFF200
+'Demos\TraceConf.mes', 1A9B, 1C5ACE98F368700
+'Help\Content.htm', 6CF, 1C4C4E8DFD5BD00
+'Help\madExcept.htm', 6D3, 1C4C4E91B708700
+'order madExcept.url', A5, 1BFEA9B83B26400
+'Tools\madCompileBugReport.exe', 6FA68, 1C98D2623AAC4BC
+'Tools\madExceptPatch.exe', 7F458, 1C98D2621997AB0
+'Tools\madExceptViewer.exe (download).url', 79, 1C4AA3A4ECB7C00
+'Tools\madPluginMan.exe', 69058, 1C98D26245D951A
+'Tools\madTestMailAPIs.exe', B1860, 1C98D2622FA56B8
+'Tools\madTraceProcess.exe', D7260, 1C98D262249E8B4
+'Tools\README.TXT', A6F, 1C5C2F45263AD00
+'www.madshi.net.url', 59, 1BFE9B9B71CC200

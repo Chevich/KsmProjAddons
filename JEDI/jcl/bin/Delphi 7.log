@@ -1,0 +1,164 @@
+================================================================================
+JCL 1.105 Release Build 3400
+==========Delphi 7==============================================================
+Installed personalities :
+32 bit Delphi
+================================================================================
+Single profile installation
+================================================================================
+Saving conditional defines...
+Loaded template for include file D:\b\JEDI\jcl\source\include\jcl.template.inc
+Saved include file D:\b\JEDI\jcl\source\include\jcld7.inc
+Making common library units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" bzip2 Jcl8087 JclAbstractContainers JclAlgorithms JclAnsiStrings JclArrayLists JclArraySets JclBase JclBinaryTrees JclBorlandTools JclCharsets JclComplex JclCompression JclContainerIntf JclCounter JclDateTime JclEDI JclEDISEF JclEDITranslators JclEDIXML JclEDI_ANSIX12 JclEDI_ANSIX12_Ext JclEDI_UNEDIFACT JclEDI_UNEDIFACT_Ext JclExprEval JclFileUtils JclHashMaps JclHashSets JclIniFiles JclLinkedLists JclLogic JclMath JclMIDI JclMime JclNotify JclPCRE JclQueues JclResources JclRTTI JclSchedule JclSimpleXml JclSortedMaps JclStacks JclStatistics JclStreams JclStrHashMap JclStringConversions JclStringLists JclStrings JclSynch JclSysInfo JclSysUtils JclTrees JclUnicode JclUnitConv JclUnitVersioning JclUnitVersioningProviders JclValidation JclVectors JclWideStrings pcre zlibh -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C- -$D- -$I- -$L- -$O+ -$Q- -$R- -$W- -$Y- -N"..\..\lib\d7" -I"..\include" -U".;..\windows;..\vcl;..\visclx" -R".;..\windows;..\vcl;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+561682 lines, 2.00 seconds, 50250 bytes code, 16736 bytes data.
+Making windows library units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" Hardlinks JclAppInst JclCIL JclCLR JclCOM JclConsole JclDebug JclDotNet JclHookExcept JclLANMan JclLocales JclMapi JclMetadata JclMiscel JclMsdosSys JclMultimedia JclNTFS JclPeImage JclRegistry JclSecurity JclShell JclStructStorage JclSvcCtrl JclTask JclTD32 JclWideFormat JclWin32 JclWin32Ex JclWinMIDI mscoree_TLB mscorlib_TLB MSHelpServices_TLB MSTask sevenzip Snmp -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C- -$D- -$I- -$L- -$O+ -$Q- -$R- -$W- -$Y- -N"..\..\lib\d7" -I"..\include" -U"..\common;.;..\vcl;..\visclx" -R"..\common;.;..\vcl;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+189172 lines, 0.77 seconds, 1836 bytes code, 164 bytes data.
+Making vcl library units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" JclFont JclGraphics JclGraphUtils JclPrint JclVersionControl JclVersionCtrlCVSImpl JclVersionCtrlSVNImpl -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C- -$D- -$I- -$L- -$O+ -$Q- -$R- -$W- -$Y- -N"..\..\lib\d7" -I"..\include" -U"..\common;..\windows;.;..\visclx" -R"..\common;..\windows;.;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+25560 lines, 0.34 seconds, 3528 bytes code, 36 bytes data.
+Making visclx library units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" JclQGraphics JclQGraphUtils -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C- -$D- -$I- -$L- -$O+ -$Q- -$R- -$W- -$Y- -N"..\..\lib\d7" -I"..\include" -U"..\common;..\windows;..\vcl;." -R"..\common;..\windows;..\vcl;."
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+11623 lines, 0.34 seconds, 11518 bytes code, 76 bytes data.
+Making common library debug units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" bzip2 Jcl8087 JclAbstractContainers JclAlgorithms JclAnsiStrings JclArrayLists JclArraySets JclBase JclBinaryTrees JclBorlandTools JclCharsets JclComplex JclCompression JclContainerIntf JclCounter JclDateTime JclEDI JclEDISEF JclEDITranslators JclEDIXML JclEDI_ANSIX12 JclEDI_ANSIX12_Ext JclEDI_UNEDIFACT JclEDI_UNEDIFACT_Ext JclExprEval JclFileUtils JclHashMaps JclHashSets JclIniFiles JclLinkedLists JclLogic JclMath JclMIDI JclMime JclNotify JclPCRE JclQueues JclResources JclRTTI JclSchedule JclSimpleXml JclSortedMaps JclStacks JclStatistics JclStreams JclStrHashMap JclStringConversions JclStringLists JclStrings JclSynch JclSysInfo JclSysUtils JclTrees JclUnicode JclUnitConv JclUnitVersioning JclUnitVersioningProviders JclValidation JclVectors JclWideStrings pcre zlibh -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C+ -$D+ -$I+ -$L+ -$O- -$Q+ -$R+ -$W+ -$Y+ -N"..\..\lib\d7\debug" -I"..\include" -U".;..\windows;..\vcl;..\visclx" -R".;..\windows;..\vcl;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+561682 lines, 1.78 seconds, 50418 bytes code, 16736 bytes data.
+Making windows library debug units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" Hardlinks JclAppInst JclCIL JclCLR JclCOM JclConsole JclDebug JclDotNet JclHookExcept JclLANMan JclLocales JclMapi JclMetadata JclMiscel JclMsdosSys JclMultimedia JclNTFS JclPeImage JclRegistry JclSecurity JclShell JclStructStorage JclSvcCtrl JclTask JclTD32 JclWideFormat JclWin32 JclWin32Ex JclWinMIDI mscoree_TLB mscorlib_TLB MSHelpServices_TLB MSTask sevenzip Snmp -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C+ -$D+ -$I+ -$L+ -$O- -$Q+ -$R+ -$W+ -$Y+ -N"..\..\lib\d7\debug" -I"..\include" -U"..\common;.;..\vcl;..\visclx" -R"..\common;.;..\vcl;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+189172 lines, 0.81 seconds, 1973 bytes code, 164 bytes data.
+Making vcl library debug units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" JclFont JclGraphics JclGraphUtils JclPrint JclVersionControl JclVersionCtrlCVSImpl JclVersionCtrlSVNImpl -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C+ -$D+ -$I+ -$L+ -$O- -$Q+ -$R+ -$W+ -$Y+ -N"..\..\lib\d7\debug" -I"..\include" -U"..\common;..\windows;.;..\visclx" -R"..\common;..\windows;.;..\visclx"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+25560 lines, 0.25 seconds, 3791 bytes code, 36 bytes data.
+Making visclx library debug units for Delphi 7
+Compiling .dcu files...
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" JclQGraphics JclQGraphUtils -U"c:\PROGRA~1\borland\delphi7\lib" -M -$C+ -$D+ -$I+ -$L+ -$O- -$Q+ -$R+ -$W+ -$Y+ -N"..\..\lib\d7\debug" -I"..\include" -U"..\common;..\windows;..\vcl;." -R"..\common;..\windows;..\vcl;."
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+11623 lines, 0.12 seconds, 16789 bytes code, 76 bytes data.
+Compiling package D:\b\JEDI\jcl\packages\d7\Jcl.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\Jcl.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\Jcl.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+132 lines, 0.45 seconds, 1173596 bytes code, 59305 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclContainers.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclContainers.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclContainers.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+64 lines, 0.33 seconds, 1372136 bytes code, 857 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclVcl.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclVcl.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclVcl.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+59 lines, 0.11 seconds, 85116 bytes code, 1677 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclVClx.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclVClx.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclVClx.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+53 lines, 0.17 seconds, 25916 bytes code, 633 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclBaseExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclBaseExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclBaseExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+18639 lines, 0.16 seconds, 35384 bytes code, 613 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclDebugExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclDebugExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclDebugExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+5612 lines, 0.08 seconds, 27300 bytes code, 345 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclProjectAnalysisExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclProjectAnalysisExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclProjectAnalysisExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+4571 lines, 0.08 seconds, 18104 bytes code, 257 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclFavoriteFoldersExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclFavoriteFoldersExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclFavoriteFoldersExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+4142 lines, 0.08 seconds, 10544 bytes code, 237 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclRepositoryExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclRepositoryExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclRepositoryExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+19488 lines, 0.09 seconds, 32904 bytes code, 597 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclUsesExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclUsesExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclUsesExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+9110 lines, 0.09 seconds, 26928 bytes code, 405 bytes data.
+Compilation success
+...done.
+Compiling package D:\b\JEDI\jcl\packages\d7\JclSIMDViewExpert.dpk...
+Compiling package D:\b\JEDI\jcl\packages\d7\JclSIMDViewExpert.dpk
+"C:\Program Files\Borland\Delphi7\bin\dcc32.exe" "D:\b\JEDI\jcl\packages\d7\JclSIMDViewExpert.dpk" -U"c:\PROGRA~1\borland\delphi7\lib" -N"..\..\lib\d7" -I"..\..\source\include;..\..\experts\common" -R"..\..\source\include;..\..\experts\common" -DRELEASE -U"..\..\lib\d7;c:\PROGRA~1\borland\delphi7\projects\bpl;..\..\source\include;..\..\experts\common" -LN"..\..\lib\d7" -LE"c:\PROGRA~1\borland\delphi7\projects\bpl"
+Borland Delphi Version 15.0
+Copyright (c) 1983,2002 Borland Software Corporation
+11682 lines, 0.14 seconds, 38208 bytes code, 789 bytes data.
+Compilation success
+...done.
+Added "D:\b\JEDI\jcl\lib\d7;D:\b\JEDI\jcl\source\include" to library search path.
+Added "D:\b\JEDI\jcl\source\common;D:\b\JEDI\jcl\source\windows;D:\b\JEDI\jcl\source\vcl;D:\b\JEDI\jcl\source\visclx" to library browsing path.
+Added "D:\b\JEDI\jcl\lib\d7\debug" to Debug DCU Path.
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclBaseExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclDebugExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclProjectAnalysisExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclFavoriteFoldersExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclRepositoryExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclUsesExpert70.bpl
+Registration ok
+Registering package C:\Program Files\Borland\Delphi7\Projects\Bpl\JclSIMDViewExpert70.bpl
+Registration ok

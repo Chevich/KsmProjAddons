@@ -1,0 +1,7 @@
+1. EtvConst.pas - клавиши навигатора
+2. DiDate.pas
+3. Etv.Inc
+4. EtvReg - регистрация EtvShb. 
+5. EtvFilt - like по date. 
+6. EtvFilt 1=2
+7. etvlook storelookupdata=true

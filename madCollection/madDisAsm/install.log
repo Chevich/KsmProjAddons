@@ -1,0 +1,19 @@
+need 'madBasic'
+'HKCU\Software\Borland\Delphi\4.0\Known Packages'\'D:\b\madCollection\madDisAsm\Delphi 4\madDisAsm_.bpl' = -
+'HKCU\Software\Borland\Delphi\7.0\Known Packages'\'D:\b\madCollection\madDisAsm\Delphi 7\madDisAsm_.bpl' = -
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madDisAsm\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madDisAsm\Delphi 7;'
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\madDisAsm.dcu', A9EB, 1C98D26293A209E
+'Delphi 4\madDisAsm_.bpl', B200, 1C98D2629650AF2
+'Delphi 4\madDisAsm_.dcp', 7D4D, 1C98D261BF2474A
+'Delphi 7\madDisAsm.dcu', AA8A, 1C98D264A93E590
+'Delphi 7\madDisAsm_.bpl', A400, 1C98D264AB5467C
+'Delphi 7\madDisAsm_.dcp', 7D38, 1C98D2641E5D5E8
+'Demos\under construction', 0, 1BFE9B8D6FFB600
+'Help\Content.htm', 6CF, 1C4C4E8E2381700
+'Help\madDisAsm.htm', 6D3, 1C4C4E9190E2D00
+'www.madshi.net.url', 59, 1BFE9B9B71CC200

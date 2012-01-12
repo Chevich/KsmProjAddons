@@ -1,0 +1,23 @@
+need 'madBasic'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madSecurity\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madSecurity\Delphi 7;'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Browsing Path' -= 'D:\b\madCollection\madSecurity\Sources;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Browsing Path' -= 'D:\b\madCollection\madSecurity\Sources;'
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Sources', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\madSecurity.dcu', 1633E, 1C98D26290CD3F0
+'Delphi 4\madSecurity_.bpl', 10800, 1C98D2629781DC2
+'Delphi 4\madSecurity_.dcp', E195, 1C98D26290CD3F0
+'Delphi 7\madSecurity.dcu', 163C3, 1C98D264A774958
+'Delphi 7\madSecurity_.bpl', 10000, 1C98D264AC8594C
+'Delphi 7\madSecurity_.dcp', E2E1, 1C98D264A774958
+'Demos\under construction', 0, 1BFE9B8D6FFB600
+'Help\Content.htm', 6CF, 1C4C4E8D64C5500
+'Help\madSecurity.htm', 6D7, 1C4C4E920353B00
+'Sources\mad.inc', 1C1, 1C7D2C7F10D1FC4
+'Sources\madSecurity.pas', 1CAEE, 1C680B230ECD800
+'Sources\madSecurity_.dpk', 254, 1C69C38B414C700
+'www.madshi.net.url', 59, 1BFE9B9B71CC200

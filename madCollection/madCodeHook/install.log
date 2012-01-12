@@ -1,0 +1,112 @@
+need 'madBasic'
+need 'madDisAsm'
+need 'madRemote'
+'HKCU\Software\Borland\Delphi\4.0\Library'\'Search Path' -= 'D:\b\madCollection\madCodeHook\Delphi 4;'
+'HKCU\Software\Borland\Delphi\7.0\Library'\'Search Path' -= 'D:\b\madCollection\madCodeHook\Delphi 7;'
+'Delphi 4', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 7', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\process wide', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\system wide\HookProcessTermination', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\system wide\PrintMonitor', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\system wide\VariousDlls', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\system wide', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos\system wide - win9x only', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Demos', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Dll', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Help', FFFFFFFF, FFFFFFFFFFFFFFFF
+'PowerBasic', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Tools', FFFFFFFF, FFFFFFFFFFFFFFFF
+'Delphi 4\madCodeHook.dcu', 4207, 1C98D26274A377E
+'Delphi 4\madCodeHook_.bpl', 4400, 1C98D2627705D1E
+'Delphi 4\madCodeHook_.dcp', 4DC7, 1C98D26274A377E
+'Delphi 7\madCodeHook.dcu', 42A5, 1C98D2641F1C1AA
+'Delphi 7\madCodeHook_.bpl', 4200, 1C98D264209992E
+'Delphi 7\madCodeHook_.dcp', 4F51, 1C98D2641F42404
+'Demos\download precompiled demos.url', 6B, 1C98C99C11C97B2
+'Demos\mad.res', 1B98, 1C271231F235B00
+'Demos\needAdminRights.res', 1F0, 1C7A16EB947C934
+'Demos\process wide\ProcessAPI.bdsproj', 203B, 1C4A93740486C00
+'Demos\process wide\ProcessAPI.cpp', A5B, 1C3546E85892800
+'Demos\process wide\ProcessAPI.dpr', 829, 1C482F23A002100
+'Demos\process wide\ProcessAPI.dsp', A21, 1C41CEEE3A12700
+'Demos\process wide\ProcessAPI.vcproj', A9A, 1C41CEEEBF96200
+'Demos\process wide\ProcessFunc.bdsproj', 203C, 1C4A9373A528B00
+'Demos\process wide\ProcessFunc.cpp', D68, 1C400266D8E0E00
+'Demos\process wide\ProcessFunc.dpr', AE7, 1C3546E62F70F00
+'Demos\process wide\ProcessFunc.dsp', A29, 1C41CEED5530B00
+'Demos\process wide\ProcessFunc.vcproj', AA0, 1C41CEED8E69200
+'Demos\readme.txt', 120, 1C337FFB4710600
+'Demos\system wide\HookProcessTermination\HookProcessTermination.bdsproj', 2047, 1C4A9376D951A00
+'Demos\system wide\HookProcessTermination\HookProcessTermination.cpp', 32B1, 1C56B8D2974AC00
+'Demos\system wide\HookProcessTermination\HookProcessTermination.dpr', 2FA0, 1C56B8C8FACFF00
+'Demos\system wide\HookProcessTermination\HookProcessTermination.dsp', A81, 1C41CEF3D095600
+'Demos\system wide\HookProcessTermination\HookProcessTermination.vcproj', B19, 1C41CEF95405800
+'Demos\system wide\HookProcessTermination\HookTerminateAPIs.bdsproj', 2042, 1C4A9377F76BD00
+'Demos\system wide\HookProcessTermination\HookTerminateAPIs.cpp', 1314, 1C4256462EEF000
+'Demos\system wide\HookProcessTermination\HookTerminateAPIs.dpr', 1097, 1C33FF68AD18F00
+'Demos\system wide\HookProcessTermination\HookTerminateAPIs.dsp', AEB, 1C41CECDD11B000
+'Demos\system wide\HookProcessTermination\HookTerminateAPIs.vcproj', BED, 1C87D6930C47F62
+'Demos\system wide\HookProcessTermination\InjectService.bdsproj', 203E, 1C4A937771E8200
+'Demos\system wide\HookProcessTermination\InjectService.cpp', 273F, 1C35F6019272200
+'Demos\system wide\HookProcessTermination\InjectService.dpr', 34B4, 1C981F9B3CA7700
+'Demos\system wide\HookProcessTermination\InjectService.dsp', A39, 1C41CEF44306400
+'Demos\system wide\HookProcessTermination\InjectService.vcproj', AE3, 1C41CEFA12C1A00
+'Demos\system wide\PrintMonitor\HookPrintAPIs.bdsproj', 203E, 1C4A937A6CD8A00
+'Demos\system wide\PrintMonitor\HookPrintAPIs.cpp', 2510, 1C425646DA98500
+'Demos\system wide\PrintMonitor\HookPrintAPIs.dpr', 2081, 1C3396CCAE8A000
+'Demos\system wide\PrintMonitor\HookPrintAPIs.dsp', AC3, 1C41CEBD6CF0400
+'Demos\system wide\PrintMonitor\HookPrintAPIs.vcproj', B92, 1C87D69254FF2F6
+'Demos\system wide\PrintMonitor\printer.res', 5D54, 1C2CAED0FBE8800
+'Demos\system wide\PrintMonitor\PrintForm.dfm', 451, 1C33334470F3200
+'Demos\system wide\PrintMonitor\PrintForm.pas', C9A, 1C35F5F25F74600
+'Demos\system wide\PrintMonitor\PrintMonitor.bdsproj', 203D, 1C4A937AF25C500
+'Demos\system wide\PrintMonitor\PrintMonitor.dpr', 33A, 1C7A16CF7FB82C6
+'Demos\system wide\VariousDlls\DllInjector.bdsproj', 203C, 1C4A93848ED7200
+'Demos\system wide\VariousDlls\DllInjector.cpp', 2175, 1C35F5FE11FDF00
+'Demos\system wide\VariousDlls\DllInjector.dpr', 21D7, 1C7A16CEB6DA0DE
+'Demos\system wide\VariousDlls\DllInjector.dsp', A29, 1C41CEF0C292100
+'Demos\system wide\VariousDlls\DllInjector.vcproj', AA0, 1C41CEF0E8B7B00
+'Demos\system wide\VariousDlls\Empty.bdsproj', 2036, 1C4A93841C66400
+'Demos\system wide\VariousDlls\Empty.cpp', 2A6, 1C425647F8B2800
+'Demos\system wide\VariousDlls\Empty.dpr', 21B, 1C3335431AA0000
+'Demos\system wide\VariousDlls\Empty.dsp', A66, 1C41CEDFD8E3A00
+'Demos\system wide\VariousDlls\Empty.vcproj', B3D, 1C87D68ECADB71C
+'Demos\system wide\VariousDlls\HookDirect3D.bdsproj', 203D, 1C4A9383BD08300
+'Demos\system wide\VariousDlls\HookDirect3D.cpp', 1BB0, 1C67D1F2E3F5B00
+'Demos\system wide\VariousDlls\HookDirect3D.dpr', 1B04, 1C67D1E698D5A00
+'Demos\system wide\VariousDlls\HookDirect3D.dsp', ABD, 1C482B07D39A000
+'Demos\system wide\VariousDlls\HookDirect3D.vcproj', B89, 1C87D690C342F26
+'Demos\system wide\VariousDlls\HookLoadLibrary.bdsproj', 2040, 1C4A938573B8E00
+'Demos\system wide\VariousDlls\HookLoadLibrary.dpr', 17C9, 1C3547088851800
+'Demos\system wide\VariousDlls\HookProcessCreation.bdsproj', 2044, 1C4A9384EE35300
+'Demos\system wide\VariousDlls\HookProcessCreation.cpp', 219B, 1C5F44843AA8B00
+'Demos\system wide\VariousDlls\HookProcessCreation.dpr', 1A4A, 1C7B2BE98ABE622
+'Demos\system wide\VariousDlls\HookProcessCreation.dsp', AFF, 1C41CEDAC7E4600
+'Demos\system wide\VariousDlls\HookProcessCreation.vcproj', BC8, 1C87D68FFAD744C
+'Demos\system wide - win9x only\SystemAPI.bdsproj', 203A, 1C4A93750F8E200
+'Demos\system wide - win9x only\SystemAPI.cpp', 18C6, 1C3546EAF424F00
+'Demos\system wide - win9x only\SystemAPI.dpr', 160E, 1C3546E8DE16300
+'Demos\system wide - win9x only\SystemAPI.dsp', A19, 1C41CEE7AB9AF00
+'Demos\system wide - win9x only\SystemAPI.vcproj', A94, 1C41CEE9D4BC800
+'Dll\gcc++.readme.txt', 81, 1C55A482C75F400
+'Dll\madCHook - dynamic - borland.lib', 1600, 1C98D26461455C2
+'Dll\madCHook - dynamic - gcc.lib', 9A52, 1C98D264630F1FA
+'Dll\madCHook - dynamic - microsoft.lib', 31D0, 1C98D26454C103A
+'Dll\madCHook - dynamic.h', 67CE, 1C8EE6DEE87C8C2
+'Dll\madCHook - static - microsoft.txt', 4B, 1C35AB4B55EAE00
+'Dll\madCHook - static.h', 6C4A, 1C8F0A8CF85AB78
+'Dll\madCHook.def', CA1, 1C8C5A68030175C
+'Dll\madCHook.dll', 1D200, 1C98D264293E192
+'Dll\madCHook.pas', 6469, 1C8EE6DFC0B3CE0
+'Dll\madRmt.def', 18D, 1C44B26431C8700
+'Dll\mchEvaluation.exe', 38658, 1C98D2644E0C668
+'Dll\readme.txt', 455, 1C7A2295921C936
+'Help\Content.htm', 6CF, 1C4C4E8E3694400
+'Help\madCodeHook.htm', 6D7, 1C4C4E916ABD300
+'PowerBasic\madCHook.inc', 4C8B, 1C3B118DA853400
+'PowerBasic\ProcessAPI.bas', CF6, 1C3B1166FD2F900
+'PowerBasic\ProcessFunc.bas', ED3, 1C3B1167E211500
+'PowerBasic\test-DllInjector.bas', 730, 1C3B1C054242D00
+'PowerBasic\test.bas', 14BC, 1C3B1C077E77300
+'Tools\madIsBadModule.exe', 63A58, 1C98D262A1A3DAA
+'www.madshi.net.url', 59, 1BFE9B9B71CC200
